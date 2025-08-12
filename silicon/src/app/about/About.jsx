@@ -1,5 +1,8 @@
 import React from "react";
 import { FaGraduationCap } from "react-icons/fa";
+import { FiUsers } from "react-icons/fi";
+import { GoTrophy } from "react-icons/go";
+import { MdOutlineRocketLaunch } from "react-icons/md";
 
 const About = () => {
   return (
@@ -17,9 +20,9 @@ const About = () => {
       {/* for my flex */}
       <div className="flex flex-wrap justify-center">
         {/* first */}
-        <div className="h-74 rounded-2xl p-8 w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
+        <div className="h-64 rounded-2xl p-8 w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
           <span>
-            <FaGraduationCap className="h-12 w-12 text-red-600" />
+            <FaGraduationCap className="h-12 w-12 mt-4 mb-2 text-red-600" />
           </span>
           <h2 className="text-3xl text-gray-800 text-center mb-4 font-semibold">
             Our Mission
@@ -30,9 +33,9 @@ const About = () => {
           </p>
         </div>
         {/* 2nd */}
-        <div className="h-74 rounded-2xl p-8 w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
+        <div className="h-64 rounded-2xl p-8 w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
           <span>
-            <FaGraduationCap className="h-12 w-12 text-red-600" />
+            <FiUsers className="h-12 w-12 mt-4 mb-2 text-red-600" />
           </span>
           <h2 className="text-3xl text-gray-800 text-center mb-4 font-semibold">
             Community Support
@@ -42,9 +45,9 @@ const About = () => {
           </p>
         </div>
         {/* 3rd */}
-        <div className="h-74 rounded-2xl p-8 w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
+        <div className="h-64 rounded-2xl p-8 w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
           <span>
-            <FaGraduationCap className="h-12 w-12 text-red-600" />
+            <GoTrophy className="h-12 w-12 mt-4 mb-2 text-red-600" />
           </span>
           <h2 className="text-3xl text-gray-800 text-center mb-4 font-semibold">
             Certification
@@ -55,14 +58,14 @@ const About = () => {
         </div>
         {/* 4th */}
 
-        <div className="h-74 p-8 rounded-2xl w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
+        <div className="h-64 p-8 rounded-2xl w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
           <span>
-            <FaGraduationCap className="h-12 w-12 text-red-600" />
+            <MdOutlineRocketLaunch className="h-12 w-12 mt-4 mb-2 text-red-600" />
           </span>
           <h2 className="text-3xl text-gray-800 text-center mb-4 font-semibold">
             Career Launch
           </h2>
-          <p className="text-center text-lg text-gray-600 mb-8">
+          <p className="text-center text-lg text-gray-600 mb-2">
             Get job placement assistance and career guidance.
           </p>
         </div>

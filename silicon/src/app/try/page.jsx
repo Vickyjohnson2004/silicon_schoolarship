@@ -10,10 +10,9 @@ import {
 const contentBlocks = [
   {
     image: "/images/bg1.jpg",
-    header: "Explore the Mountains",
-    paragraph1:
-      "Breathe in the fresh air and feel the serenity of the heights.",
-    paragraph2: "Perfect for hiking, photography, and soul-searching.",
+    header: "Join Hackathons",
+    paragraph1: "Compete & Win.",
+    paragraph2: "Participate in exciting coding competitions.",
   },
   {
     image: "/images/bg2.jpg",
