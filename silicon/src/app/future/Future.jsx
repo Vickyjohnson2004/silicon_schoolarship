@@ -1,4 +1,8 @@
+"use client";
+
 import React from "react";
+import Link from "next/link";
+import Scholarship from "../schoolarship/page";
 
 const Future = () => {
   return (
@@ -10,9 +14,12 @@ const Future = () => {
         Apply now for our scholarship program and join thousands of successful
         graduates
       </p>
-      <button className="bg-white text-red-600 font-bold py-2 px-4 rounded">
+      <Link
+        href="/schoolarship"
+        className="bg-white text-red-600 font-bold py-2 px-4 rounded inline-block"
+      >
         Apply for Scholarship
-      </button>
+      </Link>
     </div>
   );
 };
