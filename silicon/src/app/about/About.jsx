@@ -20,7 +20,7 @@ const About = () => {
       {/* for my flex */}
       <div className="flex flex-wrap justify-center">
         {/* first */}
-        <div className="h-64 rounded-2xl p-8 w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
+        <div className="h-64 rounded-2xl p-8 w-64 mt-7 hover:shadow-xl bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
           <span>
             <FaGraduationCap className="h-12 w-12 mt-4 mb-2 text-red-600" />
           </span>
@@ -33,7 +33,7 @@ const About = () => {
           </p>
         </div>
         {/* 2nd */}
-        <div className="h-64 rounded-2xl p-8 w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
+        <div className="h-64 rounded-2xl p-8 hover:shadow-xl w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
           <span>
             <FiUsers className="h-12 w-12 mt-4 mb-2 text-red-600" />
           </span>
@@ -45,7 +45,7 @@ const About = () => {
           </p>
         </div>
         {/* 3rd */}
-        <div className="h-64 rounded-2xl p-8 w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
+        <div className="h-64 rounded-2xl p-8 hover:shadow-xl w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
           <span>
             <GoTrophy className="h-12 w-12 mt-4 mb-2 text-red-600" />
           </span>
@@ -58,7 +58,7 @@ const About = () => {
         </div>
         {/* 4th */}
 
-        <div className="h-64 p-8 rounded-2xl w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
+        <div className="h-64 p-8 rounded-2xl hover:shadow-xl w-64 mt-7 bg-gray-200 flex flex-col items-center justify-center mb-8 mx-auto">
           <span>
             <MdOutlineRocketLaunch className="h-12 w-12 mt-4 mb-2 text-red-600" />
           </span>

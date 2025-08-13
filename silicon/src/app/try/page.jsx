@@ -7,7 +7,6 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-// import image1 from "../../assets/forONE.jpg";
 
 const contentBlocks = [
   {
