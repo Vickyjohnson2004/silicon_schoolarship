@@ -41,6 +41,21 @@ const NIGERIAN_STATES = [
   "Zamfara",
 ];
 
+const COURSES = [
+  "Frontend Development",
+  "Backend Development",
+  "Fullstack Development",
+  "UI/UX Design",
+  "Data Science",
+  "Data Analysis",
+  "Cybersecurity",
+  "Mobile App Development",
+  "DevOps",
+  "Product Management",
+  "Cloud Computing",
+  "AI / Machine Learning",
+];
+
 export default function SignupForm() {
   const [formData, setFormData] = useState({
     phone: "",
@@ -56,7 +71,7 @@ export default function SignupForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    // console.log("Form submitted:", formData);
     // Handle submission logic here
   };
 
@@ -180,20 +195,11 @@ export default function SignupForm() {
             required
           >
             <option value="">Select your preferred course</option>
-            <option value="Frontend Development">Frontend Development</option>
-            <option value="Backend Development">Backend Development</option>
-            <option value="Fullstack Development">Fullstack Development</option>
-            <option value="UI/UX Design">UI/UX Design</option>
-            <option value="Data Science">Data Science</option>
-            <option value="Data Analysis">Data Analysis</option>
-            <option value="Cybersecurity">Cybersecurity</option>
-            <option value="Mobile App Development">
-              Mobile App Development
-            </option>
-            <option value="DevOps">DevOps</option>
-            <option value="Product Management">Product Management</option>
-            <option value="Cloud Computing">Cloud Computing</option>
-            <option value="AI / Machine Learning">AI / Machine Learning</option>
+            {COURSES.map((course) => (
+              <option key={course} value={course}>
+                {course}
+              </option>
+            ))}
           </select>
 
           {/* Submit */}
