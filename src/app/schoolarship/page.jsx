@@ -76,17 +76,18 @@ export default function SignupForm() {
   };
 
   return (
-    <div className="min-h-screen  flex items-center justify-center bg-gray-100 px-4  ">
-      <div className="max-w-2xl w-full bg-white p-8 rounded-3xl shadow-lg">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+      <div className="max-w-2xl w-full bg-white text-black p-8 rounded-3xl shadow-lg">
         <h1 className="text-2xl font-bold mb-6 text-center text-gray-800">
           Apply for Scholarship
         </h1>
         <p className="text-center mb-7 text-gray-600">
           Join Silicon Delta Academy and transform your future
         </p>
+
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Phone */}
-          <div className="flex flex-row gap-4 space-y-4">
+          {/* Phone & Email */}
+          <div className="flex flex-row gap-4">
             <div className="flex-[50%]">
               <label
                 htmlFor="phone"
@@ -106,7 +107,6 @@ export default function SignupForm() {
               />
             </div>
 
-            {/* Email */}
             <div className="flex-[50%]">
               <label
                 htmlFor="email"
@@ -128,79 +128,77 @@ export default function SignupForm() {
           </div>
 
           {/* State of Origin */}
-          <div className="flex flex-row gap-4 space-y-4">
-            <div className="flex-[50%]">
-              <label
-                htmlFor="stateOfOrigin"
-                className="block text-sm font-medium text-gray-700"
-              >
-                State of Origin
-              </label>
-              <select
-                name="stateOfOrigin"
-                id="stateOfOrigin"
-                value={formData.stateOfOrigin}
-                onChange={handleChange}
-                className="mt-1 w-full px-4 py-2 border rounded focus:outline-none focus:ring-2"
-                required
-              >
-                <option value="">Select State</option>
-                {NIGERIAN_STATES.map((state) => (
-                  <option key={state} value={state}>
-                    {state}
-                  </option>
-                ))}
-              </select>
-            </div>
+          <div>
+            <label
+              htmlFor="stateOfOrigin"
+              className="block text-sm font-medium text-gray-700"
+            >
+              State of Origin
+            </label>
+            <input
+              list="states"
+              name="stateOfOrigin"
+              id="stateOfOrigin"
+              value={formData.stateOfOrigin}
+              onChange={handleChange}
+              className="mt-1 w-full px-4 py-2 border rounded focus:outline-none focus:ring-2"
+              placeholder="Enter or choose your state"
+              required
+            />
+          </div>
 
-            {/* State of Residence */}
-            <div className="flex-[50%]">
-              <label
-                htmlFor="stateOfResidence"
-                className="block text-sm font-medium text-gray-700"
-              >
-                State of Residence
-              </label>
-              <select
-                name="stateOfResidence"
-                id="stateOfResidence"
-                value={formData.stateOfResidence}
-                onChange={handleChange}
-                className="mt-1 w-full px-4 py-2 border rounded focus:outline-none focus:ring-2"
-                required
-              >
-                <option value="">Select State</option>
-                {NIGERIAN_STATES.map((state) => (
-                  <option key={state} value={state}>
-                    {state}
-                  </option>
-                ))}
-              </select>
-            </div>
+          {/* State of Residence */}
+          <div>
+            <label
+              htmlFor="stateOfResidence"
+              className="block text-sm font-medium text-gray-700"
+            >
+              State of Residence
+            </label>
+            <input
+              list="states"
+              name="stateOfResidence"
+              id="stateOfResidence"
+              value={formData.stateOfResidence}
+              onChange={handleChange}
+              className="mt-1 w-full px-4 py-2 border rounded focus:outline-none focus:ring-2"
+              placeholder="Enter or choose your state"
+              required
+            />
           </div>
 
           {/* Intended Course */}
-          <label
-            htmlFor="intendedCourse"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Intended Course
-          </label>
-          <select
-            name="intendedCourse"
-            id="intendedCourse"
-            value={formData.intendedCourse}
-            onChange={handleChange}
-            className="mt-1 w-full px-4 py-3 border rounded focus:outline-none focus:ring-2"
-            required
-          >
-            <option value="">Select your preferred course</option>
-            {COURSES.map((course) => (
-              <option key={course} value={course}>
-                {course}
-              </option>
+          <div>
+            <label
+              htmlFor="intendedCourse"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Intended Course
+            </label>
+            <input
+              list="courses"
+              name="intendedCourse"
+              id="intendedCourse"
+              value={formData.intendedCourse}
+              onChange={handleChange}
+              className="mt-1 w-full px-4 py-2 border rounded focus:outline-none focus:ring-2"
+              placeholder="Enter or choose a course"
+              required
+            />
+          </div>
+
+          {/* Datalists */}
+          <datalist id="states">
+            {NIGERIAN_STATES.map((state) => (
+              <option key={state} value={state} />
             ))}
-          </select>
+          </datalist>
+
+          <datalist id="courses">
+            {COURSES.map((course) => (
+              <option key={course} value={course} />
+            ))}
+          </datalist>
 
           {/* Submit */}
           <button
